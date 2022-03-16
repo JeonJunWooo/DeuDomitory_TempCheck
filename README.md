@@ -4,11 +4,11 @@
 1. code버튼 클릭 후 Download ZIP
 2. 다운받은 zip파일 압축 해제
 3. my_information.txt를 열어서 자신의 정보 입력 후 저장  
-3-1. my_information.txt에서 각각 정보를 한줄씩 적어야한다.
-ex) 김철수
-    20201234
-    A1323
-    36.5
+3-1. my_information.txt에서 각각 정보를 한줄씩 적어야한다.  
+ex) 김철수  
+    20201234  
+    A1323  
+    36.5  
 4. 압축해제한 폴더 IDE에서 열기(vscode, pycharm 등)
 5. cmd(터미널)을 열어서 cd autocheck_env/Scripts 후 activate로 가상환경 실행
 6. cd .. 을 두번하여 원래 폴더로 돌아와서 행긱이면 py happy_temp_check.py 입력(효긱이면 py hyomin_temp_check.py 입력)  
@@ -36,7 +36,7 @@ chromedriver.exe와 chrome의 버전을 확인
 ***
   
 ### 앞으로의 업데이트
-~~체온 입력 기능~~ 완료
+~~체온 입력 기능~~ 완료  
 ~~본인은 .exe 실행파일로 프로그램 실행으로 사용 중이므로 공용으로도 사용할 수 있도록 만들기(단, 이름, 학번, 기숙사 호실은 한번 입력이 영구하도록)~~
 ~~효민 기숙사의 경우 제2기숙사와 여자기숙사를 선택하는 요소도~~
 ~~자신의 학번, 이름, 기숙사 호실의 정보가 바뀌었을때 재입력 기능~~  
