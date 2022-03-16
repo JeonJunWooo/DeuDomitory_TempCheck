@@ -4,9 +4,14 @@
 2. 다운받은 zip파일 압축 해제
 3. 압축해제한 폴더 IDE에서 열기(vscode, pycharm 등)
 4. cmd(터미널)을 열어서 cd autocheck_env/Scripts 후 activate로 가상환경 실행
-5. auto_temp_check 파일의 my_information 값 수정
-6. cd .. 을 두번하여 원래 폴더로 돌아와서 py auto_temp_check.py 입력
-7. 체온 입력을 하면 크롬이 자동으로 실행되고 잠시 후 체온 제출 완료!  
+5. **happy_temp_check(or hyomin_temp_check) 파일의 my_information 값 수정**
+6. cd .. 을 두번하여 원래 폴더로 돌아와서 행긱이면 py happy_temp_check.py 입력(효긱이면 py hyomin_temp_check.py 입력)  
+6-1. **효민 2긱을 기본으로 해두었으며 여긱일 시 hyomin_temp_check.py의 40번째 줄을 주석처리 후 42번째 줄의 주석삭제 후 사용할 것!!**
+7. 체온 입력을 하면 크롬이 자동으로 실행되고 잠시 후 체온 제출 완료!
+---
+### 코드의 기본값
+* ver. 체온 입력
+* hyomin_auto_temp의 경우 효민 제 2기숙사가 기본값!!
 ---
 #### 코드 일부 설명
 ```py
@@ -35,4 +40,5 @@ my_information = ["Name", "Student ID", "Dormitory Room Number", "Temperature"]
 ### 앞으로의 업데이트
 ~~체온 입력 기능~~ 완료
 * 본인은 .exe 실행파일로 프로그램 실행으로 사용 중이므로 공용으로도 사용할 수 있도록 만들기(단, 이름, 학번, 기숙사 호실은 한번 입력이 영구하도록)
+* 효민 기숙사의 경우 제2기숙사와 여자기숙사를 선택하는 요소도 
 * 자신의 학번, 이름, 기숙사 호실의 정보가 바뀌었을때 재입력 기능
