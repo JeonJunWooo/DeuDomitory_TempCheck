@@ -1,4 +1,12 @@
 ## DeuDomitory_TempCheck
+#### Windows 사용법
+1. code버튼 클릭 후 Download ZIP
+2. 다운받은 zip파일 압축 해제
+3. 압축해제한 폴더 IDE에서 열기(vscode, pycharm 등)
+4. cmd(터미널)을 열어서 cd autocheck_env/Scripts 후 activate로 가상환경 실행
+5. cd .. 을 두번하여 원래 폴더로 돌아와서 py auto_temp_check.py
+6. 체온 입력을 하면 크롬이 자동으로 실행되고 잠시 후 체온 제출 완료!
+
 ```py
 if  getattr(sys, 'frozen', False): 
     chromedriver_path = os.path.join(sys._MEIPASS, "chromedriver.exe")
