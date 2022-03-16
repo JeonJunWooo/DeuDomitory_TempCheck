@@ -8,10 +8,18 @@ else:
 ```
 chromedriver.exe와 chrome의 버전을 확인
 ```py
-ex) my_information = ["김철수", "20221234", "A1234", "36.5"]
+# ver.체온입력
+# ex) my_information = ["김철수", "20221234", "A1234 or B1234", temperature]
+temperature = input('체온 입력: ')
+my_information = ["Name", "Student ID", "Dormitory Room Number", temperature]
+
+# or
+
+# ver.체온값고정
+# ex) my_information = ["김철수", "20221234", "A1234", "36.5"]
 my_information = ["Name", "Student ID", "Dormitory Room Number", "Temperature"]
 ```
-해당 내용을 자신의 정보로 입력
+"ver.체온입력" 또는 "ver.체온값고정"을 선택하여 자신의 정보로 입력
 ***
 ### 앞으로의 업데이트
 ~~체온 입력 기능~~ 완료
