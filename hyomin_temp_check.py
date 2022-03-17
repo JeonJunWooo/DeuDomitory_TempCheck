@@ -1,5 +1,5 @@
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
+import chromedriver_autoinstaller
 from selenium.webdriver.common.keys import Keys
 import time
 import sys, os
@@ -12,17 +12,17 @@ f.close()
 num = 0 # my_information의 인덱스 번호 초기화
 
 
-if  getattr(sys, 'frozen', False): 
-    chromedriver_path = os.path.join(sys._MEIPASS, "./chromedriver.exe")
-    driver = webdriver.Chrome(chromedriver_path)
+chrome_ver = chromedriver_autoinstaller.get_chrome_version().split('.')[0]
+driver_path = './chromedriver.exe'
+if os.path.exists(driver_path):
+    print(f"chrom driver is insatlled: {driver_path}")
 else:
-    driver = webdriver.Chrome()
+    print(f"install the chrome driver(ver: {chrome_ver})")
+    chromedriver_autoinstaller.install(True)
     
-# 드라이버 연결
-driver = webdriver.Chrome(ChromeDriverManager().install())
-# driver = webdriver.Chrome('./chromedriver.exe')
+driver = webdriver.Chrome(driver_path)
 
-# 동의대학교 행복기숙사 체온 측정 구글폼
+# 동의대학교 효민기숙사 체온 측정 구글폼
 url = 'https://docs.google.com/forms/d/e/1FAIpQLScggmdGC-sUiNOTSVmsgzwgw2lfEmqYevrIwZ09E7dSVO17pA/viewform'
     
 driver.get(url) # 웹사이트 이동
@@ -31,9 +31,9 @@ time.sleep(1)
 labeled_num1 = [1, 5, 19, 23]
 
 # 1. 생활관 유형 제2효민생활관일 시
-labeled_num2 = [13, 43, 53, 63]
+# labeled_num2 = [13, 43, 53, 63]
 # 2. 만약 여긱일 시
-# labeled_num2 = [16, 43, 53, 63]
+labeled_num2 = [16, 43, 53, 63]
 for i in labeled_num1:
     xpath = '//input[@aria-labelledby="i'+str(i)+'"]'
     driver.find_element_by_xpath(xpath).send_keys(my_information[num])

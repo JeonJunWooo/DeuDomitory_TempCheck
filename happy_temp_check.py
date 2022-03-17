@@ -1,5 +1,5 @@
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
+import chromedriver_autoinstaller
 from selenium.webdriver.common.keys import Keys
 import time
 import sys, os
@@ -10,16 +10,15 @@ f.close()
 
 num = 0 # my_information의 인덱스 번호 초기화
 
-
-if  getattr(sys, 'frozen', False): 
-    chromedriver_path = os.path.join(sys._MEIPASS, "./chromedriver.exe")
-    driver = webdriver.Chrome(chromedriver_path)
+chrome_ver = chromedriver_autoinstaller.get_chrome_version().split('.')[0]
+driver_path = './chromedriver.exe'
+if os.path.exists(driver_path):
+    print(f"chrom driver is insatlled: {driver_path}")
 else:
-    driver = webdriver.Chrome()
-    
-# 드라이버 연결
-driver = webdriver.Chrome(ChromeDriverManager().install())
-# driver = webdriver.Chrome('./chromedriver.exe')
+    print(f"install the chrome driver(ver: {chrome_ver})")
+    chromedriver_autoinstaller.install(True)
+
+driver = webdriver.Chrome(driver_path)
 
 # 동의대학교 행복기숙사 체온 측정 구글폼
 url = 'https://docs.google.com/forms/d/e/1FAIpQLSdka3B7OA0l1aj7H26bPkNynKzHaH2PahuRNdbqGpyEepCX3w/viewform'
