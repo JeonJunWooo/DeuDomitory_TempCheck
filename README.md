@@ -41,10 +41,14 @@ driver = webdriver.Chrome()
 ~~자신의 학번, 이름, 기숙사 호실의 정보가 바뀌었을때 재입력 기능~~  
 완료, 메모장을 읽는 방식으로 아이디어를 내서 사용자의 정보를 직접 입력할 수 있게 되었음.
 ~~exe 실행파일 생성완료하여 크롬드라이버와 my_information.txt 파일까지 한 폴더에 넣으면 .exe 실행파일이 실행되는 것을 확인하였으나, 다른 PC에 전달하여도 되는지 확인이 필요함.~~
-완료, 동의대학교 행복기숙사, 효민 제2기숙사, 효민 여자기숙사 모두 exe 실행파일로 만들어서 애브리타임을 통해 파일 배포 완료!  
+완료, 동의대학교 행복기숙사, 효민 제2기숙사, 효민 여자기숙사 모두 exe 실행파일로 만들어서 애브리타임을 통해 파일 배포 완료
 
 ---
 ### 기숙사 체온 제출 자동화 프로그램  
 행복기숙사: https://drive.google.com/file/d/1DOHlTKIzQib_r-jod5fHL1_9mxIkUF6f/view?usp=sharing  
 효민기숙사: https://drive.google.com/file/d/1LE-HaaXLwWEkGgBH-foAHPqEqkZDu_Jr/view?usp=sharing  
 여자기숙사: https://drive.google.com/file/d/1IIBjwv7JCi2FGuLp2Ft2_IZQNoUHz9s3/view?usp=sharing  
+
+
+https://user-images.githubusercontent.com/90057208/158793288-65390c99-e957-499f-be8d-d54096d659db.mp4
+
