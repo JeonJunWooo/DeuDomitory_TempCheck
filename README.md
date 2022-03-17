@@ -28,13 +28,10 @@ f.close()
 ```
 my_information.txt 파일을 불러와서 저장
 ```py
-if  getattr(sys, 'frozen', False): 
-    chromedriver_path = os.path.join(sys._MEIPASS, "./chromedriver.exe")
-    driver = webdriver.Chrome(chromedriver_path)
-else:
-    driver = webdriver.Chrome()
+chromedriver_autoinstaller.install() # chromedriver 자동 다운로드
+driver = webdriver.Chrome()
 ```
-chromedriver.exe와 chrome의 버전을 확인
+최신 버전의 chromedriver를 자동으로 가져오기 때문에 이전 버전의 chromedriver를 찾는 코드 삭제
 ***
   
 ### 앞으로의 업데이트
@@ -43,4 +40,11 @@ chromedriver.exe와 chrome의 버전을 확인
 ~~효민 기숙사의 경우 제2기숙사와 여자기숙사를 선택하는 요소도~~
 ~~자신의 학번, 이름, 기숙사 호실의 정보가 바뀌었을때 재입력 기능~~  
 완료, 메모장을 읽는 방식으로 아이디어를 내서 사용자의 정보를 직접 입력할 수 있게 되었음.
-* exe 실행파일 생성완료하여 크롬드라이버와 my_information.txt 파일까지 한 폴더에 넣으면 .exe 실행파일이 실행되는 것을 확인하였으나, 다른 PC에 전달하여도 되는지 확인이 필요함.
+~~exe 실행파일 생성완료하여 크롬드라이버와 my_information.txt 파일까지 한 폴더에 넣으면 .exe 실행파일이 실행되는 것을 확인하였으나, 다른 PC에 전달하여도 되는지 확인이 필요함.~~
+완료, 동의대학교 행복기숙사, 효민 제2기숙사, 효민 여자기숙사 모두 exe 실행파일로 만들어서 애브리타임을 통해 파일 배포 완료!  
+
+---
+### 기숙사 체온 제출 자동화 프로그램  
+행복기숙사: https://drive.google.com/file/d/1DOHlTKIzQib_r-jod5fHL1_9mxIkUF6f/view?usp=sharing  
+효민기숙사: https://drive.google.com/file/d/1LE-HaaXLwWEkGgBH-foAHPqEqkZDu_Jr/view?usp=sharing  
+여자기숙사: https://drive.google.com/file/d/1IIBjwv7JCi2FGuLp2Ft2_IZQNoUHz9s3/view?usp=sharing  
