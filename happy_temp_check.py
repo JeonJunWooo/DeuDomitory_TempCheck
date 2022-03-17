@@ -4,21 +4,15 @@ from selenium.webdriver.common.keys import Keys
 import time
 import sys, os
 
-f = open('my_information.txt', 'r', encoding='UTF8')
+
+f = open('./my_information.txt', 'r', encoding='UTF8')
 my_information = f.readlines()
 f.close()
 
 num = 0 # my_information의 인덱스 번호 초기화
 
-chrome_ver = chromedriver_autoinstaller.get_chrome_version().split('.')[0]
-driver_path = './chromedriver.exe'
-if os.path.exists(driver_path):
-    print(f"chrom driver is insatlled: {driver_path}")
-else:
-    print(f"install the chrome driver(ver: {chrome_ver})")
-    chromedriver_autoinstaller.install(True)
-
-driver = webdriver.Chrome(driver_path)
+chromedriver_autoinstaller.install()
+driver = webdriver.Chrome()
 
 # 동의대학교 행복기숙사 체온 측정 구글폼
 url = 'https://docs.google.com/forms/d/e/1FAIpQLSdka3B7OA0l1aj7H26bPkNynKzHaH2PahuRNdbqGpyEepCX3w/viewform'

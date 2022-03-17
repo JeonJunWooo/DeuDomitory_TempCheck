@@ -8,11 +8,11 @@ buildOptions = dict(packages = ["time", "sys", "os", "chromedriver_autoinstaller
                    includes = [])
                    
 base = "Win32GUI" if sys.platform == "win32" else None
-exe = [Executable('hyomin_temp_check.py', base=base)]
+exe = [Executable('happy_temp_check.py', base=base)]
 
 setup(
-    name= 'happy_temp_check',
-    version = '0.1',
+    name= '행복기숙사 체온 체크',
+    version = '0.2',
     author = "Inys",
     description = "dong-eui university happy domitory auto temperature check program",
     options = dict(build_exe = buildOptions),
