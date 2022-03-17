@@ -1,5 +1,7 @@
 ## DeuDomitory_TempCheck
 ### 동의대학교 기숙사 코로나 자가 체온 제출 자동화 코드
+autocheck_env 가상환경에 사용된 것  
+Python Version - 3.10.2
 #### Windows 사용법
 1. code버튼 클릭 후 Download ZIP
 2. 다운받은 zip파일 압축 해제
